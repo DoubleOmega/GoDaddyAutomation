@@ -1,7 +1,4 @@
-from selenium import webdriver
-
-from DriverSetup.WebDriverSetup import WebDriverSetup
-from Pages.homepage import HomePage
+from GodaddyProject.DriverSetup.WebDriverSetup import WebDriverSetup
 import unittest
 
 
