@@ -9,9 +9,6 @@ class LaunchWebsite(WebDriverSetup):
 
     def test_Home_Page(self):
         driver = self.driver
-        self.driver.get("https://godaddy.com")
-        # Will throw an error if the page doesn't load in (time)
-        self.driver.set_page_load_timeout(20)
 
         web_page_title = "Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy"
 
