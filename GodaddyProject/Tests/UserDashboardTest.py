@@ -1,39 +1,34 @@
 import unittest
 from selenium import webdriver
 from time import sleep
+
+from GodaddyProject.DriverSetup.WebDriverSetup import WebDriverSetup
 from GodaddyProject.Locators.Locators import Locators
 from GodaddyProject.Pages.LoginPage import loginpage
 from GodaddyProject.Pages.HomePage import homepage
-from GodaddyProject.UsernamePassword.Users import users
+from GodaddyProject.UsernamePassword.Users import Users
 
 
-class Login(unittest.TestCase):
+class Login(WebDriverSetup):
 
-    @classmethod
-    def setUpClass(cls):
-        cls.driver = webdriver.Chrome("/users/admin/desktop/chromedriver")
-        cls.driver.implicitly_wait(10)
-        cls.driver.maximize_window()
-
-    def test_user_dashboard_valid(self):
+    def test_valid_login(self):
         driver = self.driver
-
-        driver.get("https://godaddy.com")
-
         login = loginpage(driver)
         login.click_sign_in_dropdown()
+        sleep(3)
         login.click_sign_in_link()
-        login.click_sign_in_username().sendkeys(users.username1)
-        login.click_sign_in_password().sendkeys(users.password1)
-        sleep(2)
-        login.click_sign_in_submit_button()
+        sleep(3)
+        with open(Users.path, 'r') as file:
+            credentials = file.readlines()
+            username = credentials[0]
+            password = credentials[1]
 
-        home = homepage(driver)
-        home.click_bell_icon_button()
-        home.sign_out_dropdown_xpath
-        home.click_sign_out_link_button()
+        login.click_sign_in_username(username)
+        login.click_sign_in_password(password)
+        login.click_remember_me_checkbox()
+        login.click_sign_in_submit_button()
         sleep(3)
 
-    @classmethod
-    def test_teardown(cls):
-        cls.driver.close()
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,9 +1,11 @@
 class Locators():
      #sign in locators
     sign_in_dropdown_xpath = "//span[normalize-space()='Sign In']"
-    sign_in_link_class = "//a[normalize-space()='Sign In']"
+    # sign_in_link_class = "//a[normalize-space()='Sign In']"
+    sign_in_link_link_text = 'Sign In'
     sign_in_username_id = 'username'
     sign_in_password_id = 'password'
+    remember_me_checkbox_id = 'remember-me'
     sign_in_submit_button_id = 'submitBtn'
 
     #homepage locators(once signed in)

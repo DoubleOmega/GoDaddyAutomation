@@ -144,3 +144,5 @@ cython_debug/
 /allure_results
 /allure-results
 /allure-report
+/GodaddyProject/UsernamePassword/Credentials.txt
+/GodaddyProject/Tests/Practice_login.py
