@@ -22,7 +22,7 @@ class LaunchWebsite(WebDriverSetup):
         print(url)
 
     def test_page_source(self):
-        # pagesource = self.driver.page_source
+        # page source = self.driver.page_source
         with open('page_source.html', 'r', encoding='utf-8') as f:
             if self.driver.title in f.read():
                 print("Page title is in page source")

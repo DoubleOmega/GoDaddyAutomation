@@ -1,16 +1,21 @@
+import unittest
+from time import sleep
 from GodaddyProject.DriverSetup.WebDriverSetup import WebDriverSetup
 from GodaddyProject.DriverSetup.LoginSetup import LoginSetup
-from GodaddyProject.Pages.MyProductsTabPage import MyProductsTabPage
+from GodaddyProject.Pages.ProductsTab import productstab
 
 
 class LaunchWebPage(WebDriverSetup):
-    class Login(LoginSetup):
+
 
         def test_add_item_to_cart(self):
+            LoginSetup.login()
             driver = self.driver
-            mptp = MyProductsTabPage(driver)
-            mptp.search_new_domain()
+            prod = productstab(driver)
+            prod.search_new_domain().sendkeys('ehjbdsfijabwfjew')
+            sleep(3)
+            prod.click_search_button()
 
 
-
-
+if __name__ == '__main__':
+    unittest.main()

@@ -13,4 +13,10 @@ class Locators():
     sign_out_link_button_xpath = "//a[normalize-space()='Sign Out']"
     bell_icon_button_xpath ="//button[@id='notifications-bell']//*[local-name()='svg']"
 
+    #my products page tab locators
+    search_for_a_new_domain_xpath = "//input[@id='search-box']"
+    search_button_xpath = "//button[@aria-label='Search button']"
 
+    #cart locators
+    get_it_button_xpath = "//span[normalize-space()='Get It']"
+    looks_good_keep_going_button_xpath = "//span[normalize-space()='Looks Good, Keep Going']"

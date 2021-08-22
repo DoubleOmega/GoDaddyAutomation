@@ -1,15 +1,12 @@
 import unittest
-from selenium import webdriver
 from time import sleep
 
 from GodaddyProject.DriverSetup.WebDriverSetup import WebDriverSetup
-from GodaddyProject.Locators.Locators import Locators
 from GodaddyProject.Pages.LoginPage import loginpage
-from GodaddyProject.Pages.HomePage import homepage
 from GodaddyProject.UsernamePassword.Users import Users
 
 
-class Login(WebDriverSetup):
+class LaunchWebPage(WebDriverSetup):
 
     def test_valid_login(self):
         driver = self.driver
