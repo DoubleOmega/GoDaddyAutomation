@@ -15,7 +15,7 @@ class loginpage():
         self.sign_in_username_id = Locators.sign_in_username_id
         self.sign_in_password_id = Locators.sign_in_password_id
         self.sign_in_submit_button_id = Locators.sign_in_submit_button_id
-        self.remember_me_checkbox = Locators.remember_me_checkbox_id
+        self.remember_me_checkbox_id = Locators.remember_me_checkbox_id
 
     def click_sign_in_dropdown(self):
         self.driver.find_element_by_xpath(self.sign_in_dropdown_xpath).click()
@@ -31,7 +31,7 @@ class loginpage():
         self.driver.find_element_by_id(self.sign_in_password_id).send_keys(password)
 
     def click_remember_me_checkbox(self):
-        self.driver.find_element_by_id(self.remember_me_checkbox).click()
+        self.driver.find_element_by_id(self.remember_me_checkbox_id).click()
 
     def click_sign_in_submit_button(self):
         self.driver.find_element_by_id(self.sign_in_submit_button_id).click()

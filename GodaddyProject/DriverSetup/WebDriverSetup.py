@@ -1,6 +1,6 @@
 import unittest
 from selenium import webdriver
-import time
+
 
 
 class WebDriverSetup(unittest.TestCase):

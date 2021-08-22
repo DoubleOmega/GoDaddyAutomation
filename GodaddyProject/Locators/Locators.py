@@ -11,6 +11,6 @@ class Locators():
     #homepage locators(once signed in)
     sign_out_dropdown_xpath = "//span[@class='chevron-down open']//*[local-name()='svg']"
     sign_out_link_button_xpath = "//a[normalize-space()='Sign Out']"
-    bell_icon_button_class ="//button[@id='notifications-bell']//*[local-name()='svg']"
+    bell_icon_button_xpath ="//button[@id='notifications-bell']//*[local-name()='svg']"
 
 
