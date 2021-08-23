@@ -4,6 +4,7 @@ from time import sleep
 from GodaddyProject.DriverSetup.WebDriverSetup import WebDriverSetup
 from GodaddyProject.Pages.LoginPage import loginpage
 from GodaddyProject.UsernamePassword.Users import Users
+from GodaddyProject.UsernamePassword.Credentials import Credentials
 
 
 class LaunchWebPage(WebDriverSetup):
@@ -15,13 +16,13 @@ class LaunchWebPage(WebDriverSetup):
         sleep(3)
         login.click_sign_in_link()
         sleep(3)
-        with open(Users.path, 'r') as file:
-            credentials = file.readlines()
-            username = credentials[0]
-            password = credentials[1]
+        # with open(Users.path, 'r') as file:
+        #     credentials = file.readlines()
+        #     username = credentials[0]
+        #     password = credentials[1]
 
-        login.click_sign_in_username(username)
-        login.click_sign_in_password(password)
+        login.click_sign_in_username(Credentials.username)
+        login.click_sign_in_password(Credentials.password)
         login.click_remember_me_checkbox()
         login.click_sign_in_submit_button()
         sleep(3)
