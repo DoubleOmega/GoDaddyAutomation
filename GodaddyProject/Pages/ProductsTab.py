@@ -13,7 +13,7 @@ class productstab():
         self.click_search_button = Locators.search_button_xpath
 
     def search_new_domain(self):
-        self.driver.find_element_by_xpath(self.search_new_domain).click()
+        self.driver.find_element_by_xpath(self.search_new_domain).sendkeys('cccccccccccc')
 
     def click_search_button(self):
         self.driver.find_element_by_xpath(self.click_search_button).click()

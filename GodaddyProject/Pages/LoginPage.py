@@ -25,7 +25,7 @@ class loginpage():
         self.driver.find_element_by_link_text(self.sign_in_link_text).click()
 
     def click_sign_in_username(self, username):
-        self.driver.find_element_by_id(self.sign_in_username_id).send_keys(username)
+        self.driver.find_element_by_id(self.sign_in_username_id).click()
 
     def click_sign_in_password(self, password):
         self.driver.find_element_by_id(self.sign_in_password_id).send_keys(password)
